@@ -1,0 +1,31 @@
+﻿<Window x:Class="Kurs1125.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs1125"
+        mc:Ignorable="d"
+        Title="Диспетчер Такси" d:Width="500" d:Height="400" WindowStartupLocation="CenterScreen" Width="492" Background="#FFEEC798">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="AUto"/>
+            <ColumnDefinition Width="AUto"/>
+            <ColumnDefinition Width="AUto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" MinHeight="10"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Margin="58,5,288,5" Grid.Column="1">Водители</Button>
+        <Button  Grid.Column="1" Margin="137,5,200,5">
+            <Run Text="Клиенты"/>
+        </Button>
+        <Button Margin="10,5,364,5"
+                Grid.Column="1" Click="Button_Click_2">
+            <Run Text="Заказы"/>
+        </Button>
+        
+        
+    </Grid>
+    
+</Window>
