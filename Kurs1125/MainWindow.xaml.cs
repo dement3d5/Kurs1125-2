@@ -69,5 +69,10 @@ namespace Kurs1125
         {
 
         }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
