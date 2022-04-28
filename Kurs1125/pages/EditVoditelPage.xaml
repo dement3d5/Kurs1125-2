@@ -19,11 +19,11 @@
         </StackPanel.RenderTransform>
         <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="452" Background="#FFEEC798" HorizontalAlignment="Left">
             <Label Content="Фамилия" Width="319" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LastName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="20"/>
+            <TextBox Text="{Binding LName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="20"/>
             <Label Content="Имя" Width="320" HorizontalAlignment="Left" Height="24"/>
-            <TextBox Text="{Binding FirstName}" Width="328"/>
+            <TextBox Text="{Binding FName}" Width="328"/>
             <Label Content="Отчество" Width="317" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LastName}" Width="328" Background="White"/>
+            <TextBox Text="{Binding MName}" Width="328" Background="White"/>
             <Label Content="Дата рождения" Width="323" HorizontalAlignment="Left" HorizontalContentAlignment="Left"/>
             <DatePicker SelectedDate="{Binding Birthday}" Width="320" Height="26"  HorizontalAlignment="Left" Background="#FFEEC798"/>
             <Label Content="Серия паспорта" Width="320" HorizontalAlignment="Left"/>

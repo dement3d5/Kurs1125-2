@@ -17,11 +17,11 @@
             <StackPanel DataContext="{Binding EditPrepods}">
 
                 <Label Content="Имя"/>
-                <TextBox Text="{Binding LastName}" Width="792"/>
+                <TextBox Text="{Binding LName}" Width="792"/>
                 <Label Content="Фамилия"/>
-                <TextBox Text="{Binding FirstName}" Width="795"/>
+                <TextBox Text="{Binding FName}" Width="795"/>
                 <Label Content="Номер телефона"/>
-                <TextBox Text="{Binding FirstName}" Width="795"/>
+                <TextBox Text="{Binding Number}" Width="795"/>
 
 
             </StackPanel>
