@@ -22,7 +22,6 @@
         <Button Content="Водители" Margin="10,196,182,169" Grid.Column="1">
         </Button>
         <Button Content="Выход" Grid.Column="1" Margin="21,327,39,20"/>
-        <Label x:Name="SomeLabel" Content="{Binding CurrentDateTime}" ContentStringFormat="yyyy-MM-dd HH:mm:ss" Margin="59,24,-175,324" Grid.Column="2" Background="White" />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
