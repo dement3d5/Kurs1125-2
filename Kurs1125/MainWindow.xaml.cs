@@ -20,17 +20,8 @@ namespace Kurs1125
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }

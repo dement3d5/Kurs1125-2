@@ -5,22 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs1125"
         mc:Ignorable="d"
-        Title="Диспетчер Такси" d:Width="500" d:Height="400" WindowStartupLocation="CenterScreen" Width="392" Background="#FFEEC798" Height="279">
+        Title="Диспетчер Такси" d:Width="500" d:Height="400" WindowStartupLocation="CenterScreen" Background="#FFEEC798">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="21,152,148,212" Grid.Column="1" ><Run Language="ru-ru" Text="Справочники"/></TextBlock>
+        <Button Grid.Column="1" Margin="21,66,10,283">Архив</Button>
+        <Button Content="Диспетчеркая" Click="Button_Click_2" Margin="21,24,10,323" Grid.Column="1"/>
+        <Button Content="Учет" Margin="21,106,10,245" Grid.Column="1"/>
+        <Button Content="Авто" Click="Button_Click_7" Grid.Column="1" Margin="10,172,182,192"/>
+        <Button Content="Районы" Click="Button_Click_6" Margin="75,171,120,192" Grid.Column="1"/>
+        <Button Content="Улицы" Margin="75,196,120,169" Grid.Column="1"/>
+        <Button Content="Водители" Margin="10,196,182,169" Grid.Column="1">
+        </Button>
+        <Button Content="Выход" Grid.Column="1" Margin="21,327,39,20"/>
+        <Label x:Name="SomeLabel" Content="{Binding CurrentDateTime}" ContentStringFormat="yyyy-MM-dd HH:mm:ss" Margin="59,24,-175,324" Grid.Column="2" Background="White" />
 
-        <TextBlock Width="40" Text=""/>
-        <TextBlock Margin="264,165,157,163" Grid.Row="1" ><Run Language="ru-ru" Text="Справочники"/></TextBlock>
-        <Button Margin="264,72,20,249" Grid.Row="1">Архив</Button>
-        <Button Margin="264,23,20,299" Grid.Row="1" Content="Диспетчеркая" Click="Button_Click_2"/>
-        <Button Margin="264,124,20,197" Grid.Row="1" Content="Учет"/>
-        <Button Margin="264,193,181,144" Grid.Row="1" Content="Авто" Click="Button_Click_7"/>
-        <Button Margin="264,217,181,120" Grid.Row="1" Content="Районы" Click="Button_Click_6"/>
-        <Button Margin="324,193,113,144" Grid.Row="1" Content="Улицы"/>
-        <Button Margin="324,217,113,120" Grid.Row="1" Content="Водители"/>
-        <Button Margin="292,252,44,73" Grid.Row="1" Content="Выходsbsd"/>
         <Grid.RowDefinitions>
-            <RowDefinition Height="28" MinHeight="10"/>
-            <RowDefinition />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
 
