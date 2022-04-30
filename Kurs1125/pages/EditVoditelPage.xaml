@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="350"
       Title="EditCuratorPage">
 
-    <StackPanel RenderTransformOrigin="0.5,0.5" Margin="0,0,-3,-28" Background="#FFEEC798">
+    <StackPanel RenderTransformOrigin="0.5,0.5" Margin="0,0,-1,3" Background="#FFEEC798">
         <StackPanel.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -17,29 +17,29 @@
                 <TranslateTransform/>
             </TransformGroup>
         </StackPanel.RenderTransform>
-        <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="452" Background="#FFEEC798" HorizontalAlignment="Left">
-            <Label Content="Фамилия" Width="319" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="20"/>
-            <Label Content="Имя" Width="320" HorizontalAlignment="Left" Height="24"/>
-            <TextBox Text="{Binding FName}" Width="328"/>
-            <Label Content="Отчество" Width="317" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding MName}" Width="328" Background="White"/>
-            <Label Content="Дата рождения" Width="323" HorizontalAlignment="Left" HorizontalContentAlignment="Left"/>
-            <DatePicker SelectedDate="{Binding Birthday}" Width="320" Height="26"  HorizontalAlignment="Left" Background="#FFEEC798"/>
-            <Label Content="Серия паспорта" Width="320" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LastName}" Width="329"/>
-            <Label Content="Номер паспорта" Width="320" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LastName}" Width="328"/>
-            <Label Content="Марка автомобиля" Width="320" RenderTransformOrigin="0.506,0.554" HorizontalAlignment="Left"/>
-            <TextBox Text="{Binding LastName}" Width="329"/>
-            <Label Content="Цвет автомобилля" Width="326" RenderTransformOrigin="0.506,0.554"/>
-            <TextBox Text="{Binding LastName}" Width="328"/>
-            <Label Content="ГОС номер" Width="320" RenderTransformOrigin="0.506,0.554"/>
-            <TextBox Text="{Binding LastName}" Width="329"/>
-            <Label Content="Смена водителя" Width="326" RenderTransformOrigin="0.506,0.554" Height="26"/>
-            <TextBox Text="{Binding LastName}" Width="329"/>
+        <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="403" Background="#FFEEC798" HorizontalAlignment="Left">
+            <Label Content="Фамилия" Width="312" HorizontalAlignment="Left" Height="23"/>
+            <TextBox Text="{Binding LName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="16"/>
+            <Label Content="Имя" Width="320" HorizontalAlignment="Left" Height="23"/>
+            <TextBox Text="{Binding FName}" Width="328" Height="15"/>
+            <Label Content="Отчество" Width="327" Height="23"/>
+            <TextBox Text="{Binding MName}" Width="328" Background="White" Height="14"/>
+            <Label Content="Дата рождения" Width="323" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="25"/>
+            <DatePicker SelectedDate="{Binding Birthday}" Width="330" Height="23"  HorizontalAlignment="Left" Background="#FFEEC798"/>
+            <Label Content="Серия паспорта" Width="320" HorizontalAlignment="Left" Height="25"/>
+            <TextBox Text="{Binding LastName}" Width="330" Height="15"/>
+            <Label Content="Номер паспорта" Width="320" HorizontalAlignment="Left" Height="25"/>
+            <TextBox Text="{Binding LastName}" Width="328" Height="15"/>
+            <Label Content="Марка автомобиля" Width="320" RenderTransformOrigin="0.506,0.554" HorizontalAlignment="Left" Height="25"/>
+            <TextBox Text="{Binding LastName}" Width="330" Height="15"/>
+            <Label Content="Цвет автомобилля" Width="326" RenderTransformOrigin="0.506,0.554" Height="25"/>
+            <TextBox Text="{Binding LastName}" Width="328" Height="14"/>
+            <Label Content="ГОС номер" Width="320" RenderTransformOrigin="0.506,0.554" Height="25"/>
+            <TextBox Text="{Binding LastName}" Width="330" Height="16"/>
+            <Label Content="Смена водителя" Width="326" RenderTransformOrigin="0.506,0.554" Height="24"/>
+            <TextBox Text="{Binding LastName}" Width="330" Height="14"/>
         </StackPanel>
-        <Button Content="Сохранить" Command="{Binding SaveCurator}" Width="317" Height="21" Background="#FFF1ED94"/>
+        <Button Content="Сохранить" Command="{Binding SaveCurator}" Width="290" Height="21" Background="#FFF1ED94"/>
     </StackPanel>
 
 </Page>

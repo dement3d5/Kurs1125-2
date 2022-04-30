@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="400"
       Title="EditAbonentPage">
 
     <Grid>
@@ -17,11 +17,11 @@
             <StackPanel DataContext="{Binding EditPrepods}">
 
                 <Label Content="Имя"/>
-                <TextBox Text="{Binding LName}" Width="792"/>
+                <TextBox Text="{Binding LName}" Width="398"/>
                 <Label Content="Фамилия"/>
-                <TextBox Text="{Binding FName}" Width="795"/>
+                <TextBox Text="{Binding FName}" Width="397"/>
                 <Label Content="Номер телефона"/>
-                <TextBox Text="{Binding Number}" Width="795"/>
+                <TextBox Text="{Binding Number}" Width="396"/>
 
 
             </StackPanel>
