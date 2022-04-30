@@ -1,0 +1,27 @@
+﻿<Page x:Class="Kurs1125.pages.EditZakaziPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kurs1125.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="350"
+      Title="EditZakaziPage">
+
+    <Grid Background="#FFF5C68E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Сохранить" Command="{Binding SavePrepods}" Background="#FFF1ED94" Margin="70,413,70,0" Grid.Row="1"/>
+        
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="53,20,233,410" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="132,20,154,410" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="53,73,154,357" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="53,110,154,320" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="53,148,207,282" Grid.RowSpan="2"/>
+
+
+
+    </Grid>
+</Page>
