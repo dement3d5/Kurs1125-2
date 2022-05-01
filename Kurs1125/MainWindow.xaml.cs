@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kurs1125.pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,16 +22,11 @@ namespace Kurs1125
     public partial class MainWindow : Window
     {
 
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            
+           
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 

@@ -18,7 +18,7 @@ namespace Kurs1125.pages
     /// <summary>
     /// Логика взаимодействия для ViewZakaziPagePage.xaml
     /// </summary>
-    public partial class ViewZakaziPagePage : Page
+    public partial class EditZakaziPagePage : Page
     {
      
     }

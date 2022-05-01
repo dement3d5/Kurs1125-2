@@ -18,16 +18,8 @@ namespace Kurs1125.pages
     /// <summary>
     /// Interaction logic for EditZakaziPage.xaml
     /// </summary>
-    public partial class EditZakaziPage : Page
+    public partial class ViewZakaziPage : Page
     {
-        public EditZakaziPage()
-        {
-            InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
