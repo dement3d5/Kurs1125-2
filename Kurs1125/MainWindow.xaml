@@ -6,31 +6,34 @@
         xmlns:local="clr-namespace:Kurs1125"
         mc:Ignorable="d"
         Title="Диспетчер Такси" d:Width="500" d:Height="400" WindowStartupLocation="CenterScreen" Background="#FFEEC798">
-    <Grid>
-        
 
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
+        <DockPanel>
+            <Frame x:Name="NewFrame" NavigationUIVisibility="Hidden" Background="AliceBlue"></Frame>
+        </DockPanel>
         <TextBlock Margin="21,152,148,212" Grid.Column="1" ><Run Language="ru-ru" Text="Справочники"/></TextBlock>
         <Button Grid.Column="1" Margin="21,66,10,283">Архив</Button>
-        <Button Content="Диспетчеркая" Margin="21,24,10,323" Grid.Column="1" Click="Button_Click"/>
+        <Button x:Name="Disp" Content="Диспетчеркая" Margin="21,24,10,323" Grid.Column="1" Click="Button_Click"/>
         <Button Content="Учет" Margin="21,106,10,245" Grid.Column="1"/>
         <Button Content="Авто" Grid.Column="1" Margin="10,172,182,192"/>
         <Button Content="Районы" Margin="75,171,120,192" Grid.Column="1"/>
         <Button Content="Улицы" Margin="75,196,120,169" Grid.Column="1"/>
-        <Button Content="Водители" Click="Button_Click_3" Margin="10,196,182,169" Grid.Column="1">
+        <Button x:Name="Vodit" Content="Водители" Click="Button_Click_3" Margin="10,196,182,169" Grid.Column="1">
         </Button>
-        <Button Content="Выход" Click="Button_Click_3" Grid.Column="1" Margin="21,327,39,20"/>
+        <Button x:Name="Vixod" Content="Выход" Click="Button_Click_3" Grid.Column="1" Margin="21,327,39,20"/>
+      
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-       
 
+        
     </Grid>
 
 </Window>

@@ -9,7 +9,12 @@
       Title="ViewZakaziPage">
 
     <Grid Background="#FFEEC798">
-        <DataGrid ItemsSource="{Binding Items}" Margin="286,10,0,0" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid ItemsSource="{Binding Items}" Margin="286,10,0,-430" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Время получения" Width="110"/>
                 <DataGridTextColumn Header="Время назначения"/>
@@ -26,8 +31,8 @@
         <Button Height="20" VerticalAlignment="Center" Margin="107,0,591,0" Grid.Row="1" Content="Удалить заказ"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="29*" />
-            <RowDefinition Height="421*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
 
