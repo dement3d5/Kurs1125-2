@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Kurs1125
 {
     /// <summary>
@@ -44,7 +45,7 @@ namespace Kurs1125
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

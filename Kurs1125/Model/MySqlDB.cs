@@ -56,13 +56,13 @@ namespace Kurs1125
         internal MySqlConnection conn = null;
         internal void InitConnection()
         {
-            InitConnection(Properties.Settings.Default.server, Properties.Settings.Default.user,
-                Properties.Settings.Default.db);
+            InitConnection(Properties.Settings.Default.host, Properties.Settings.Default.username, Properties.Settings.Default.password, Properties.Settings.Default.db);
         }
-        internal void InitConnection(string server, string user, string db)
+        internal void InitConnection(string server, string user, string pass, string db)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.UserID = user;
+            builder.Password = pass;
             builder.Database = db;
             builder.Server = server;
             builder.CharacterSet = "utf8";

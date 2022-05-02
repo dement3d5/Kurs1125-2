@@ -20,6 +20,6 @@ namespace Kurs1125.pages
     /// </summary>
     public partial class ViewZakaziPage : Page
     {
-        
+
     }
 }

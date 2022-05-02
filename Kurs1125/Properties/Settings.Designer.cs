@@ -26,36 +26,36 @@ namespace Kurs1125.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("root")]
-        public string user {
+        public string username {
             get {
-                return ((string)(this["user"]));
+                return ((string)(this["username"]));
             }
             set {
-                this["user"] = value;
+                this["username"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("a1s2d34f1145")]
-        public string pass {
+        public string password {
             get {
-                return ((string)(this["pass"]));
+                return ((string)(this["password"]));
             }
             set {
-                this["pass"] = value;
+                this["password"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string server {
+        public string host {
             get {
-                return ((string)(this["server"]));
+                return ((string)(this["host"]));
             }
             set {
-                this["server"] = value;
+                this["host"] = value;
             }
         }
         

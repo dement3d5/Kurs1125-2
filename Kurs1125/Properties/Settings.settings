@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Kurs1125.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="user" Type="System.String" Scope="User">
+    <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)">root</Value>
     </Setting>
-    <Setting Name="pass" Type="System.String" Scope="User">
+    <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)">a1s2d34f1145</Value>
     </Setting>
-    <Setting Name="server" Type="System.String" Scope="User">
+    <Setting Name="host" Type="System.String" Scope="User">
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
