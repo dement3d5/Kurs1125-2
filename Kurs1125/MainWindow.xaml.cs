@@ -1,4 +1,5 @@
 ﻿using Kurs1125.pages;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,31 @@ namespace Kurs1125
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        public MainWindow()
         {
-            
-           
+            InitializeComponent();
+            MySqlConnection connection =MySqlDB.GetDB().GetDBConnection();
+            try
+            {
+                MessageBox.Show("Openning connection...");
+                connection.Open();
+                MessageBox.Show("connection sucsessfull.");
+                connection.Close();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error" + e.Message);
+            }
+
         }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 

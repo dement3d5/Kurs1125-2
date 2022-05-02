@@ -12,7 +12,7 @@
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Curs</Value>
+      <Value Profile="(Default)">mydb</Value>
     </Setting>
   </Settings>
 </SettingsFile>

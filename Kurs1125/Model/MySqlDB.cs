@@ -59,12 +59,12 @@ namespace Kurs1125
             InitConnection(Properties.Settings.Default.server, Properties.Settings.Default.user,
                 Properties.Settings.Default.db);
         }
-        internal void InitConnection(string host, string username, string database)
+        internal void InitConnection(string server, string user, string db)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.UserID = username;
-            builder.Database = database;
-            builder.Server = host;
+            builder.UserID = user;
+            builder.Database = db;
+            builder.Server = server;
             builder.CharacterSet = "utf8";
             builder.ConnectionTimeout = 5;
 
