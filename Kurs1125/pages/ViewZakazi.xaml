@@ -1,4 +1,4 @@
-﻿<Page x:Class="Kurs1125.pages.ViewZakaziPage"
+﻿<Window x:Class="Kurs1125.pages.ViewZakazi"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,7 +14,7 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Items}" Margin="286,10,0,-430" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black"  >
+        <DataGrid ItemsSource="{Binding Items}" Margin="298,10,-12,-410" Grid.Row="1" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Время получения" Width="110"/>
                 <DataGridTextColumn Header="Время назначения"/>
@@ -25,9 +25,7 @@
         </DataGrid>
 
 
-
-
-        <Button Height="20" VerticalAlignment="Center" Margin="0,0,698,0" Grid.Row="1" Content="Заказы"/>
+        <Button Click="Button_Clik_4" Height="20" VerticalAlignment="Center" Margin="0,0,698,0" Grid.Row="1" Content="Заказы"/>
         <Button Height="20" VerticalAlignment="Center" Margin="107,0,591,0" Grid.Row="1" Content="Удалить заказ"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -38,4 +36,4 @@
 
 
     </Grid>
-</Page>
+</Window>

@@ -10,16 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Kurs1125.pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewZakaziPagePage.xaml
+    /// Логика взаимодействия для EditVoditel.xaml
     /// </summary>
-    public partial class EditZakaziPagePage : Page
+    public partial class EditVoditel : Window
     {
-     
+        public EditVoditel()
+        {
+            InitializeComponent();
+        }
     }
 }

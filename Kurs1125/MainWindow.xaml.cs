@@ -44,17 +44,22 @@ namespace Kurs1125
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NewFrame.Content = new ViewZakaziPage();
+            ViewZakazi v = new ViewZakazi();
+            v.Show();
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            EditVoditel o = new EditVoditel();
+            o.Show();
+           
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            
         }
     }
 }

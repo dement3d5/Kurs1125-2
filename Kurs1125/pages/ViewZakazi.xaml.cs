@@ -10,21 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Kurs1125.pages
 {
     /// <summary>
-    /// Interaction logic for EditZakaziPage.xaml
+    /// Логика взаимодействия для ViewZakazi.xaml
     /// </summary>
-    public partial class ViewZakaziPage : Page
+    public partial class ViewZakazi : Window
     {
-        public ViewZakaziPage()
+        public ViewZakazi()
         {
             InitializeComponent();
-
         }
 
+       
+
+        private void Button_Clik_4(object sender, RoutedEventArgs e)
+        {
+            EditZakazi z = new EditZakazi();
+            z.Show();
+        }
     }
 }

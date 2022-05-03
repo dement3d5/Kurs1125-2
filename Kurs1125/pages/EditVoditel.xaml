@@ -1,4 +1,4 @@
-﻿<Page x:Class="Kurs1125.pages.EditVoditelPage"
+﻿<Window x:Class="Kurs1125.pages.EditVoditel"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,18 +6,26 @@
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="350"
-      Title="EditCuratorPage">
+      Title="EditVoditel">
 
-    <StackPanel RenderTransformOrigin="0.5,0.5" Margin="0,0,-1,3" Background="#FFEEC798">
+    <StackPanel RenderTransformOrigin="0.5,0.5" Background="#FFEEC798">
         <StackPanel.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
                 <SkewTransform/>
-                <RotateTransform Angle="0.456"/>
+                <RotateTransform Angle="0.109"/>
                 <TranslateTransform/>
             </TransformGroup>
         </StackPanel.RenderTransform>
-        <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="403" Background="#FFEEC798" HorizontalAlignment="Left">
+        <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="403" Background="#FFEEC798" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.239"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
             <Label Content="Фамилия" Width="312" HorizontalAlignment="Left" Height="23"/>
             <TextBox Text="{Binding LName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="16"/>
             <Label Content="Имя" Width="320" HorizontalAlignment="Left" Height="23"/>
@@ -42,4 +50,4 @@
         <Button Content="Сохранить" Command="{Binding SaveCurator}" Width="290" Height="21" Background="#FFF1ED94"/>
     </StackPanel>
 
-</Page>
+</Window>
