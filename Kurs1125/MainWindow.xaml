@@ -13,27 +13,78 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <DockPanel>
-            <Frame x:Name="NewFrame" NavigationUIVisibility="Hidden" Background="AliceBlue"></Frame>
-        </DockPanel>
-        <TextBlock Margin="21,152,148,212" Grid.Column="1" ><Run Language="ru-ru" Text="Справочники"/></TextBlock>
-        <Button Grid.Column="1" Margin="21,66,10,283">Архив</Button>
-        <Button x:Name="Disp" Content="Диспетчеркая" Margin="21,24,10,323" Grid.Column="1" Click="Button_Click"/>
-        <Button Content="Учет" Margin="21,106,10,245" Grid.Column="1"/>
-        <Button Content="Авто" Grid.Column="1" Margin="10,172,182,192"/>
-        <Button Content="Районы" Margin="75,171,120,192" Grid.Column="1"/>
-        <Button Content="Улицы" Margin="75,196,120,169" Grid.Column="1"/>
-        <Button x:Name="Vodit" Content="Водители" Click="Button_Click_2" Margin="10,196,182,169" Grid.Column="1">
-        </Button>
-        <Button x:Name="Vixod" Content="Выход" Click="Button_Click_3" Grid.Column="1" Margin="21,327,39,20"/>
-      
+
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        
+
+        <DockPanel>
+            <Frame x:Name="NewFrame1" NavigationUIVisibility="Hidden" Background="AliceBlue" RenderTransformOrigin="0.438,0.499"/>
+        </DockPanel>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="106,192,76,192" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFC15E5E">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.272"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <TextBlock Margin="21,152,148,212" Grid.Column="1" ><Run Language="ru-ru" Text="Справочники"/></TextBlock>
+        <Button Grid.Column="1" Margin="21,66,10,283" Content="Архив"/>
+        <Button x:Name="Disp1" Content="Диспетчеркая" Margin="21,24,10,323" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="Учет" Margin="21,106,10,245" Grid.Column="1"/>
+        <Button Content="Авто" Grid.Column="1" Margin="10,172,182,192"/>
+        <Button Content="Районы" Margin="75,171,120,192" Grid.Column="1"/>
+        <Button Content="Улицы" Margin="75,196,120,169" Grid.Column="1"/>
+        <Button x:Name="Vodit1" Content="Водители" Click="Button_Click_2" Margin="10,196,182,169" Grid.Column="1"/>
+        <Button x:Name="Vixod1" Content="Выход" Click="Button_Click_3" Grid.Column="1" Margin="21,327,39,20"/>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="4,223,108,160" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFC15E5E">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.175"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="-28,189,210,189" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFC15E5E">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.272"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="4,157,228,222" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFC15E5E">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.175"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="95,157,108,222" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFC15E5E">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.175"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+
+
     </Grid>
 
 </Window>

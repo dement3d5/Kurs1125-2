@@ -6,48 +6,54 @@
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="350"
-      Title="EditVoditel">
+      Title="Добавление Водителя">
 
-    <StackPanel RenderTransformOrigin="0.5,0.5" Background="#FFEEC798">
-        <StackPanel.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.109"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </StackPanel.RenderTransform>
-        <StackPanel DataContext="{Binding EditCurator}" IsEnabled="False" Width="330" Height="403" Background="#FFEEC798" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.RenderTransform>
+    <Grid Background="#FFF5C68E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Line Stretch="Fill" Stroke="#FF493F3F" X2="1" Margin="125,50,181,384" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <Line.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.239"/>
+                    <RotateTransform Angle="-89.745"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </StackPanel.RenderTransform>
-            <Label Content="Фамилия" Width="312" HorizontalAlignment="Left" Height="23"/>
-            <TextBox Text="{Binding LName}" Width="328" RenderTransformOrigin="-0.14,0.517" Height="16"/>
-            <Label Content="Имя" Width="320" HorizontalAlignment="Left" Height="23"/>
-            <TextBox Text="{Binding FName}" Width="328" Height="15"/>
-            <Label Content="Отчество" Width="327" Height="23"/>
-            <TextBox Text="{Binding MName}" Width="328" Background="White" Height="14"/>
-            <Label Content="Дата рождения" Width="323" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="25"/>
-            <DatePicker SelectedDate="{Binding Birthday}" Width="330" Height="23"  HorizontalAlignment="Left" Background="#FFEEC798"/>
-            <Label Content="Серия паспорта" Width="320" HorizontalAlignment="Left" Height="25"/>
-            <TextBox Text="{Binding LastName}" Width="330" Height="15"/>
-            <Label Content="Номер паспорта" Width="320" HorizontalAlignment="Left" Height="25"/>
-            <TextBox Text="{Binding LastName}" Width="328" Height="15"/>
-            <Label Content="Марка автомобиля" Width="320" RenderTransformOrigin="0.506,0.554" HorizontalAlignment="Left" Height="25"/>
-            <TextBox Text="{Binding LastName}" Width="330" Height="15"/>
-            <Label Content="Цвет автомобилля" Width="326" RenderTransformOrigin="0.506,0.554" Height="25"/>
-            <TextBox Text="{Binding LastName}" Width="328" Height="14"/>
-            <Label Content="ГОС номер" Width="320" RenderTransformOrigin="0.506,0.554" Height="25"/>
-            <TextBox Text="{Binding LastName}" Width="330" Height="16"/>
-            <Label Content="Смена водителя" Width="326" RenderTransformOrigin="0.506,0.554" Height="24"/>
-            <TextBox Text="{Binding LastName}" Width="330" Height="14"/>
-        </StackPanel>
-        <Button Content="Сохранить" Command="{Binding SaveCurator}" Width="290" Height="21" Background="#FFF1ED94"/>
-    </StackPanel>
+            </Line.RenderTransform>
+        </Line>
+        <Button Content="Сохранить" Command="{Binding SavePrepods}" Background="#FFF1ED94" Margin="70,413,70,0" Grid.Row="1"/>
+        <TextBlock Margin="0,20,332,396" Grid.Row="1" ><Run Language="ru-ru" Text="Фамилия"/></TextBlock>
+        <TextBlock Margin="0,73,337,343" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Отчество"/></TextBlock>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="57,20,230,395" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="58,45,230,371" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="58,73,230,343" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="262,22,42,395" Grid.Row="1"/>
+        <TextBlock Margin="170,22,128,396" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Серия паспорта"/></TextBlock>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="262,45,42,370" Grid.RowSpan="2"/>
+        <TextBlock Margin="170,45,128,370" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Номер паспорта"/></TextBlock>
+        <TextBlock Margin="0,45,356,371" Grid.Row="1" ><Run Language="ru-ru" Text="Имя"/></TextBlock>
+        <TextBlock Margin="0,106,302,310" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Дата рождения"/></TextBlock>
+        <DatePicker SelectedDate="{Binding Birthday}" Margin="89,104,182,307" Grid.Row="1"/>
+        <TextBlock Margin="70,140,215,275" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Марка автомобиля"/></TextBlock>
+        <TextBlock Margin="70,165,215,250" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Цвет"/><Run Text=" автомобиля"/></TextBlock>
+        <TextBlock Margin="70,190,255,225" Grid.RowSpan="2" ><Run Language="ru-ru" Text="ГОС номер"/></TextBlock>
+        <TextBlock Margin="70,215,230,200" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Смена водителя"/></TextBlock>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="187,140,116,277" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="173,167,130,250" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="143,192,159,225" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="165,216,136,201" Grid.Row="1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+
+    </Grid>
 
 </Window>

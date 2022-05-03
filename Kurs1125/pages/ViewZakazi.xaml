@@ -6,15 +6,23 @@
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ViewZakaziPage">
+      Title="Диспетчерская">
 
     <Grid Background="#FFEEC798">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto" MinWidth="779.362"/>
+            <ColumnDefinition Width="auto" MinWidth="0"/>
+            <ColumnDefinition Width="auto" MinWidth="8.351"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Items}" Margin="298,10,-12,-410" Grid.Row="1" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"  >
+        <DataGrid ItemsSource="{Binding Items}" Margin="298,0,-12,-410" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5"  >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.227"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.996"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Время получения" Width="110"/>
                 <DataGridTextColumn Header="Время назначения"/>
@@ -29,8 +37,8 @@
         <Button Height="20" VerticalAlignment="Center" Margin="107,0,591,0" Grid.Row="1" Content="Удалить заказ"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="20" />
+            <RowDefinition Height="Auto" MinHeight="0"/>
         </Grid.RowDefinitions>
 
 

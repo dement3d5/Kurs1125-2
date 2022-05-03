@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="350"
-      Title="EditZakazi">
+      Title="Заказы">
 
     <Grid Background="#FFF5C68E">
         <Grid.RowDefinitions>
