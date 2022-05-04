@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kurs1125.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="350"
+      d:DesignHeight="450" d:DesignWidth="370" MaxHeight="450" MaxWidth="370" ResizeMode="NoResize"
       Title="Заказы">
 
     <Grid Background="#FFF5C68E">
@@ -15,26 +15,21 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Сохранить" Command="{Binding SavePrepods}" Background="#FFF1ED94" Margin="70,413,70,0" Grid.Row="1"/>
-        <TextBlock Margin="0,20,246,396" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Заявка поступила"/></TextBlock>
-        <TextBlock Margin="0,73,276,343" Grid.RowSpan="2" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="заявки"/></TextBlock>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="103,20,175,394" Grid.RowSpan="2"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="180,20,98,394" Grid.RowSpan="2"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="92,73,78,340" Grid.RowSpan="2"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="93,108,78,310" Grid.RowSpan="2"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="160,148,78,270" Grid.RowSpan="2"/>
-        <TextBlock Margin="2,108,260,307" Grid.RowSpan="2" RenderTransformOrigin="0.542,0.501" >
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-4.732"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.169"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="Адрес"/><Run Text=" д"/><Run Text="оставки"/></TextBlock>
-        <TextBlock Margin="3,148,206,270" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Номер телефона клиента"/></TextBlock>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="83,192,155,222" Grid.RowSpan="2"/>
-        <TextBlock Margin="3,192,282,223" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Стоимость"/></TextBlock>
+        <DatePicker x:Name="datePicker"
+              SelectedDate="01/01/22"
+              SelectedDateFormat="Long" Margin="243,16,16,397" Grid.Row="1"/>
+
+        <Button Content="Сохранить" Command="{Binding SavePrepods}" Background="#FFF1ED94" Margin="70,376,70,37" Grid.Row="1"/>
+        <TextBlock Margin="10,20,242,397" Grid.Row="1" ><Run Language="ru-ru" Text="Заявка поступила"/></TextBlock>
+        <TextBlock Margin="10,65,266,355" Grid.Row="1" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="заявки"/></TextBlock>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="112,65,58,347" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="112,107,59,304" Grid.Row="1"/>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="160,146,58,266" Grid.Row="1"/>
+        <TextBlock Margin="10,150,198,256" Grid.Row="1" ><Run Language="ru-ru" Text="Номер телефона клиента"/></TextBlock>
+        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="83,193,155,219" Grid.Row="1"/>
+        <TextBlock Margin="4,193,280,223" Grid.Row="1" ><Run Language="ru-ru" Text="Стоимость"/></TextBlock>
+        <TextBlock Margin="10,107,266,313" Grid.Row="1" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="доставки"/></TextBlock>
+        <Label x:Name="label" HorizontalAlignment="Left" Margin="135,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="69" Height="16"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
