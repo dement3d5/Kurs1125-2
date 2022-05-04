@@ -25,11 +25,8 @@ namespace Kurs1125.pages
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-
     }
+
+
 }
+
