@@ -27,6 +27,7 @@ namespace Kurs1125
 
             return conn;
         }
+
         public bool OpenConnection()
         {
             try
@@ -55,10 +56,6 @@ namespace Kurs1125
             }
         }
 
-        internal static SqlConnection getConnection()
-        {
-            throw new NotImplementedException();
-        }
 
         internal MySqlConnection conn = null;
         internal void InitConnection()
@@ -108,6 +105,7 @@ namespace Kurs1125
                 CloseConnection();
             }
         }
+       
 
         internal int GetNextID(string table)
         {

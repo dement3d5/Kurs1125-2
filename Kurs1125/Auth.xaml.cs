@@ -34,7 +34,7 @@ namespace Kurs1125
             DataTable table = new DataTable();
 
             string querystring = $"select login, password from mydb where login ='{loginUser}' and password = '{passUser}'";
-            SqlCommand command = new SqlCommand(querystring, MySqlDB.getConnection());
+            SqlCommand command = new SqlCommand(querystring, MySqlDB.GetDBConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
             if (table.Rows.Count == 1)
