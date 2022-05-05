@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,12 @@ namespace Kurs1125
                 Console.WriteLine(e.Message);
             }
         }
+
+        internal static SqlConnection getConnection()
+        {
+            throw new NotImplementedException();
+        }
+
         internal MySqlConnection conn = null;
         internal void InitConnection()
         {

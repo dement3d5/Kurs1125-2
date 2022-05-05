@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +26,28 @@ namespace Kurs1125
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            var loginUser = TextBox_login.Text;
+            var passUser = TextBox_password.Text;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            string querystring = $"select login, password from mydb where login ='{loginUser}' and password = '{passUser}'";
+            SqlCommand command = new SqlCommand(querystring, MySqlDB.getConnection());
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count == 1)
+            {
+                MessageBox.Show("вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainWindow main = new MainWindow();
+                this.Hide();
+                main.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Такого аккаунта не существет!", "Аккаунта не существет!!", MessageBoxButton.OK, MessageBoxImage.Warning);
+
         }
     }
 }
-
