@@ -18,15 +18,15 @@ namespace Kurs1125
                 db = new MySqlDB();
             return db;
         }
-
-
         public MySqlConnection
-                GetDBConnection()
+               GetConnection()
         {
-            InitConnection();
+            if(conn == null)
+                InitConnection();
 
             return conn;
         }
+
 
         public bool OpenConnection()
         {
