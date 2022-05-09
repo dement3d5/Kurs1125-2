@@ -13,7 +13,7 @@
             <ColumnDefinition Width="auto" MinWidth="0"/>
             <ColumnDefinition Width="auto" MinWidth="8.351"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Items}" Margin="233,13,42,-323" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" RenderTransformOrigin="0.5,0.5"  >
+        <DataGrid ItemsSource="{Binding Items}" Margin="233,13,42,-323" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" RenderTransformOrigin="0.5,0.5">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs1125"
         mc:Ignorable="d"
-        Title="Диспетчер Такси" d:Width="500" d:Height="400" MaxHeight="420" MaxWidth="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFEEC798">
+        Title="Диспетчер Такси" d:Width="500" d:Height="400" MaxHeight="420" MaxWidth="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFEEC798" Width="430">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,6 +19,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
+
+        <Image x:Name="fon" Grid.Column="1" Margin="0,10,-398,0" Stretch="Fill" Source="pack://siteoforigin:,,,/fon-vizitki-taksi-26.jpg" Grid.ColumnSpan="2"/>
 
 
         <DockPanel>

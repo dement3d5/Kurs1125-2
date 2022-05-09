@@ -46,7 +46,12 @@ namespace Kurs1125
             }
 
             currentPageControl = new MainVM().Returrn_CurrentPageControl();
+
+
+
+
         }
+
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,7 +75,7 @@ namespace Kurs1125
         }
 
  
-
+       
 
 
 
