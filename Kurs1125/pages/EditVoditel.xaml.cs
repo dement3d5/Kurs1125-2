@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kurs1125.Tools;
+using Kurs1125.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,10 @@ namespace Kurs1125.pages
     /// </summary>
     public partial class EditVoditel : Window
     {
-        public EditVoditel()
+        public EditVoditel(CurrentPageControl currentPageControl)
         {
             InitializeComponent();
+            DataContext = new EditVoditelVM(currentPageControl);
         }
     }
 }

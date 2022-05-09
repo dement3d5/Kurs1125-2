@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
+using Kurs1125.ViewModel;
+using Kurs1125.Tools;
 
 namespace Kurs1125
 {
@@ -22,10 +24,13 @@ namespace Kurs1125
     /// </summary>
     public partial class MainWindow : Window
     {
+        CurrentPageControl currentPageControl;
+
         public MainWindow()
         {
             InitializeComponent();
-            MySqlConnection connection =MySqlDB.GetDB().GetConnection();
+
+            MySqlConnection connection = MySqlDB.GetDB().GetConnection();
             try
             {
                 MessageBox.Show("Openning connection...");
@@ -39,6 +44,7 @@ namespace Kurs1125
                 MessageBox.Show("Error" + e.Message);
             }
 
+            currentPageControl = new MainVM().Returrn_CurrentPageControl();
         }
 
 
@@ -51,15 +57,16 @@ namespace Kurs1125
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            EditVoditel o = new EditVoditel();
+            EditVoditel o = new EditVoditel(currentPageControl);
             o.Show();
-           
+
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.Close();
-            
+
         }
+
     }
 }

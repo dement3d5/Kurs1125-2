@@ -77,18 +77,19 @@ namespace Kurs1125.Model
                     {
                         groups.Add(new Voditel
                         {
-                            Fname = dr.GetString("fname"),
-                            Lname = dr.GetString("lname"),
+
+                            fname = dr.GetString("fname"),
+                            lname = dr.GetString("lname"),
                             mname = dr.GetString("mname"),
                             birthday = dr.GetDateTime("birthday"),
-                            spassport = dr.GetInt32("spassport"),
-                            npassport = dr.GetInt32("npassport"),
-                            issuedApassport = dr.GetInt32("issued a passport"),
-                            dissued = dr.GetInt32("dissued"),
+                            spassport = dr.GetString("spassport"),
+                            npassport = dr.GetString("npassport"),
+                            issuedApassport = dr.GetString("issued a passport"),
+                            dissued = dr.GetDateTime("dissued"),
                             address = dr.GetString("address"),
-                            mcar = dr.GetInt32("mcar"),
-                            ncar = dr.GetInt32("ncar"),
-                            color = dr.GetInt32("color")
+                            mcar = dr.GetString("mcar"),
+                            ncar = dr.GetString("ncar"),
+                            color = dr.GetString("color")
                         });
                     }
                 }
