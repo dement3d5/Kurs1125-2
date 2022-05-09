@@ -80,13 +80,6 @@ namespace Kurs1125.Model
 
                             fname = dr.GetString("fname"),
                             lname = dr.GetString("lname"),
-                            mname = dr.GetString("mname"),
-                            birthday = dr.GetDateTime("birthday"),
-                            spassport = dr.GetString("spassport"),
-                            npassport = dr.GetString("npassport"),
-                            issuedApassport = dr.GetString("issued a passport"),
-                            dissued = dr.GetDateTime("dissued"),
-                            address = dr.GetString("address"),
                             mcar = dr.GetString("mcar"),
                             ncar = dr.GetString("ncar"),
                             color = dr.GetString("color")

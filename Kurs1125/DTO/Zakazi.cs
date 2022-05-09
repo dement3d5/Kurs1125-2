@@ -22,13 +22,16 @@ namespace Kurs1125.DTO
         [Column("dtdestination")]
         public DateTime dtdestination { get; set; }
 
+        [Column("destination")]
+        public string destination { get; set; }
+
         [Column("place of departure")]
         public string pod { get; set; }
+        
         [Column("price")]
         public string price { get; set; }
 
-        [Column("destination")]
-        public string destination { get; set; }
+
 
 
 

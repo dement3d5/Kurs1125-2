@@ -29,7 +29,7 @@
         <TextBox RenderTransformOrigin="-0.14,0.517" Margin="83,193,155,219" Grid.Row="1"/>
         <TextBlock Grid.Row="1" Text="Стоимсть" Margin="10,193,317,219" />
         <TextBlock Margin="10,107,284,313" Grid.Row="1" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="доставки"/></TextBlock>
-        <TextBlock Text="{Binding DateCreated, Mode=TwoWay, StringFormat=d}" Margin="123,16,155,397" Grid.Row="1" />
+        <TextBlock Margin="123,16,155,397" Grid.Row="1" />
         <TextBox RenderTransformOrigin="-0.14,0.517" Margin="112,18,174,395" Grid.Row="1"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>

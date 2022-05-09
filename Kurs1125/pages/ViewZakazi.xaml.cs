@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +27,14 @@ namespace Kurs1125.pages
 
        
 
-        private void Button_Clik_4(object sender, RoutedEventArgs e)
+    private void Button_Clik_4(object sender, RoutedEventArgs e)
         {
             EditZakazi z = new EditZakazi();
             z.Show();
         }
+
+
+      
     }
+
 }

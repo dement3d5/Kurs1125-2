@@ -26,5 +26,10 @@ namespace Kurs1125.pages
             InitializeComponent();
             DataContext = new EditVoditelVM(currentPageControl);
         }
+
+
+
+
     }
+
 }

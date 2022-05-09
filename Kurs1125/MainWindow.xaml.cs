@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using Kurs1125.ViewModel;
 using Kurs1125.Tools;
+using System.ComponentModel;
 
 namespace Kurs1125
 {
@@ -67,6 +68,12 @@ namespace Kurs1125
             this.Close();
 
         }
+
+ 
+
+
+
+
 
     }
 }

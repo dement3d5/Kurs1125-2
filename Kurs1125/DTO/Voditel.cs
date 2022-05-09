@@ -16,27 +16,6 @@ namespace Kurs1125.DTO
         [Column("lname")]
         public string lname { get; set; }
 
-        [Column("mname")]
-        public string mname { get; set; }
-
-        [Column("birthday")]
-        public DateTime birthday { get; set; }
-
-        [Column("spassport")]
-        public string spassport { get; set; }
-
-        [Column("npassport")]
-        public string npassport { get; set; }
-
-        [Column("issued a passport")]
-        public string issuedApassport { get; set; }
-
-        [Column("dissued")]
-        public DateTime dissued { get; set; }
-
-        [Column("address")]
-        public string address { get; set; }
-
         [Column("mcar")]
         public string mcar { get; set; }
 
