@@ -25,7 +25,7 @@ namespace Kurs1125
         public MainWindow()
         {
             InitializeComponent();
-            MySqlConnection connection =MySqlDB.GetDB().GetDBConnection();
+            MySqlConnection connection =MySqlDB.GetDB().GetConnection();
             try
             {
                 MessageBox.Show("Openning connection...");

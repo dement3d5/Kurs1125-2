@@ -25,6 +25,7 @@ namespace Kurs1125.pages
             InitializeComponent();
         }
 
+
     }
 
 

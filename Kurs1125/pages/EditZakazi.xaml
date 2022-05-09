@@ -19,18 +19,18 @@
               SelectedDate="01/01/22"
               SelectedDateFormat="Long" Margin="220,18,41,395" Grid.Row="1"/>
 
-        <Button Content="Сохранить" Command="{Binding SavePrepods}" Background="#FFF1ED94" Margin="70,376,70,37" Grid.Row="1"/>
+        <Button Content="Сохранить" Command="{Binding SaveZakazi}" Background="#FFF1ED94" Margin="70,376,70,37" Grid.Row="1"/>
         <TextBlock Margin="10,20,242,397" Grid.Row="1" ><Run Language="ru-ru" Text="Заявка поступила"/></TextBlock>
         <TextBlock Margin="10,65,266,355" Grid.Row="1" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="заявки"/></TextBlock>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="112,65,58,347" Grid.Row="1"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="112,107,59,304" Grid.Row="1"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="160,146,58,266" Grid.Row="1"/>
+        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="112,65,58,347" Grid.Row="1"/>
+        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="112,107,59,304" Grid.Row="1"/>
+        <TextBox  RenderTransformOrigin="-0.14,0.517" Margin="160,146,58,266" Grid.Row="1"/>
         <TextBlock Margin="10,150,198,256" Grid.Row="1" ><Run Language="ru-ru" Text="Номер телефона клиента"/></TextBlock>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="83,193,155,219" Grid.Row="1"/>
-        <TextBlock Margin="4,193,280,223" Grid.Row="1" ><Run Language="ru-ru" Text="Стоимость"/></TextBlock>
+        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="83,193,155,219" Grid.Row="1"/>
+        <TextBlock Grid.Row="1" Text="Стоимсть" Margin="10,193,317,219" />
         <TextBlock Margin="10,107,266,313" Grid.Row="1" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="доставки"/></TextBlock>
         <TextBlock Text="{Binding DateCreated, Mode=TwoWay, StringFormat=d}" Margin="123,16,155,397" Grid.Row="1" />
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="112,18,174,395" Grid.Row="1"/>
+        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="112,18,174,395" Grid.Row="1"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
