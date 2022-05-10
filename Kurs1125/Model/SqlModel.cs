@@ -1,8 +1,10 @@
 ﻿using Kurs1125.DTO;
+using Kurs1125.pages;
 using Kurs1125.Tools;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,10 @@ namespace Kurs1125.Model
                 sqlModel = new SqlModel();
             return sqlModel;
         }
+
+
+
+
 
         public int Insert<T>(T value)
         {
@@ -63,34 +69,8 @@ namespace Kurs1125.Model
             return ((TableAttribute)tableAtrributes.First()).Table;
         }
 
-        public List<Voditel> SelectVoditelsDB()
-        {
-            var groups = new List<Voditel>();
-            var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `voditel`";
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        groups.Add(new Voditel
-                        {
 
-                            fname = dr.GetString("fname"),
-                            lname = dr.GetString("lname"),
-                            mcar = dr.GetString("mcar"),
-                            ncar = dr.GetString("ncar"),
-                            color = dr.GetString("color")
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return groups;
-        }
-        public List<Zakazi> SelectZakaziDB()
+        public List<Zakazi> SelectZakaziDB(int v)
         {
             var groups = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
@@ -105,12 +85,12 @@ namespace Kurs1125.Model
                     {
                         groups.Add(new Zakazi
                         {
-                            Orders = dr.GetInt32("id_orders"),
-                            dtincome = dr.GetDateTime("dtincome"),
-                            dtdestination = dr.GetDateTime("dtdestination"),
-                            pod = dr.GetString("place of departure"),
-                            destination = dr.GetString("destination"),
-                            price = dr.GetString("price")
+
+                            Dtincome = dr.GetDateTime("dtincome"),
+                            Dtdestination = dr.GetDateTime("dtdestination"),
+                            Pod = dr.GetString("place of departure"),
+                            Destination = dr.GetString("destination"),
+                            Price = dr.GetString("price")
                         });
                     }
                 }

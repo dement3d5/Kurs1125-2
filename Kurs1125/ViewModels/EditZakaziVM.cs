@@ -42,5 +42,7 @@ namespace Kurs1125.ViewModels
                     model.Update(EditZakazi);
             });
         }
+
+
     }
 }

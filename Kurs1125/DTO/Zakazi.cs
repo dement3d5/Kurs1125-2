@@ -9,27 +9,25 @@ namespace Kurs1125.DTO
 {
 
 
-    [Table("Zakazi")]
+    [Table("zakazi")]
     public class Zakazi : BaseDTO
     {
 
-        [Column("id_orders")]
-        public int Orders { get; set; }
 
         [Column("dtincome")]
-        public DateTime dtincome { get; set; }
+        public DateTime Dtincome { get; set; }
 
         [Column("dtdestination")]
-        public DateTime dtdestination { get; set; }
+        public DateTime Dtdestination { get; set; }
 
         [Column("destination")]
-        public string destination { get; set; }
+        public string Destination { get; set; }
 
         [Column("place of departure")]
-        public string pod { get; set; }
+        public string Pod { get; set; }
         
         [Column("price")]
-        public string price { get; set; }
+        public string Price { get; set; }
 
 
 

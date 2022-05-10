@@ -7,22 +7,24 @@ using System.Threading.Tasks;
 
 namespace Kurs1125.DTO
 {
-    [Table("Voditel")]
+    [Table("voditel")]
     public class Voditel : BaseDTO
     {
+
+
         [Column("fname")]
-        public string fname { get; set; }
+        public string Fname { get; set; }
 
         [Column("lname")]
-        public string lname { get; set; }
+        public string Lname { get; set; }
 
         [Column("mcar")]
-        public string mcar { get; set; }
+        public string Mcar { get; set; }
 
         [Column("ncar")]
-        public string ncar { get; set; }
+        public string Ncar { get; set; }
 
         [Column("color")]
-        public string color { get; set; }
+        public string Color { get; set; }
     }
 }

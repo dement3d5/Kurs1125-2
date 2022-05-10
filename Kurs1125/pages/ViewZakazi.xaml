@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Kurs1125.pages"
-      mc:Ignorable="d" MaxHeight="400" MaxWidth="7000" ResizeMode="NoResize"
+      xmlns:local="clr-namespace:Kurs1125.pages" xmlns:viewmodels="clr-namespace:Kurs1125.ViewModels" xmlns:viewmodel="clr-namespace:Kurs1125.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:BaseVM}"
+        mc:Ignorable="d" MaxHeight="400" MaxWidth="7000" ResizeMode="NoResize"
       Title="Диспетчерская" Height="400" Width="781">
 
     <Grid Background="#FFEEC798" Margin="0,0,1,-6">
@@ -13,23 +13,17 @@
             <ColumnDefinition Width="auto" MinWidth="0"/>
             <ColumnDefinition Width="auto" MinWidth="8.351"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Items}" Margin="233,13,42,-323" Grid.Row="2" Background="#FFECD4AB" BorderBrush="Black" Foreground="Black" RenderTransformOrigin="0.5,0.5">
-            <DataGrid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.227"/>
-                    <RotateTransform Angle="0.181"/>
-                    <TranslateTransform Y="-0.996"/>
-                </TransformGroup>
-            </DataGrid.RenderTransform>
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Время получения" Width="110"/>
-                <DataGridTextColumn Header="Время назначения"/>
-                <DataGridTextColumn Header="Место отправления"/>
-                <DataGridTextColumn Header="Место Назначения"/>
-                <DataGridTextColumn Header="Статус"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <ListView ItemsSource="{Binding Zakazi}" Margin="220,30,89,-321" Grid.Row="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Время получения"  DisplayMemberBinding="{Binding Dtincome}"/>
+                    <GridViewColumn Header="Время назначения"  DisplayMemberBinding="{Binding Dtdestination}"/>
+                    <GridViewColumn Header="Место отправления"  DisplayMemberBinding="{Binding Destination}"/>
+                    <GridViewColumn Header="Место назначения"  DisplayMemberBinding="{Binding Pod}"/>
+                    <GridViewColumn Header="Стоимость"  DisplayMemberBinding="{Binding Price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
 
         <Button Click="Button_Clik_4" Height="20" VerticalAlignment="Center" Margin="0,0,698,0" Grid.Row="1" Content="Заказы"/>
