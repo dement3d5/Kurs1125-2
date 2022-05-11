@@ -44,7 +44,7 @@ namespace Kurs1125.ViewModels
             set
             {
                 selectedIndex = value;
-                Zakazi = SqlModel.GetInstance().SelectZakaziDB((selectedIndex - 1));
+                Zakazi = SqlModel.GetInstance().Zakazi((selectedIndex - 1));
                 Signal();
             }
         }

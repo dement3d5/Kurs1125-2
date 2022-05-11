@@ -34,7 +34,7 @@ namespace Kurs1125
             var db = MySqlDB.GetDB();
             if (db.OpenConnection())
             {
-                string querystring = $"select id, login, password from mydb where login ='{loginUser}' and password = '{passUser}'";
+                string querystring = $"select id, login, password from dispet where login ='{loginUser}' and password = '{passUser}'";
                 using (MySqlCommand command = new MySqlCommand(querystring, MySqlDB.GetDB().GetConnection()))
                 { 
                     using(var dr = command.ExecuteReader())

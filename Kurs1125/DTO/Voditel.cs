@@ -10,8 +10,6 @@ namespace Kurs1125.DTO
     [Table("voditel")]
     public class Voditel : BaseDTO
     {
-
-
         [Column("fname")]
         public string Fname { get; set; }
 

@@ -70,11 +70,12 @@ namespace Kurs1125.Model
         }
 
 
-        public List<Zakazi> SelectZakaziDB(int v)
+        internal List<Zakazi> Zakazi(int v)
         {
+            List<Zakazi> zakazi = new List<Zakazi>();
             var groups = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `zakazi`";
+            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
 
             if (mySqlDB.OpenConnection())
             {
@@ -90,7 +91,10 @@ namespace Kurs1125.Model
                             Dtdestination = dr.GetDateTime("dtdestination"),
                             Pod = dr.GetString("place of departure"),
                             Destination = dr.GetString("destination"),
-                            Price = dr.GetString("price")
+                            Price = dr.GetString("price"),
+                            AB1 = dr.GetInt32("Abonent_id"),
+                            ND = dr.GetInt32("number_dispatchs"),
+                            Vid = dr.GetInt32("Voditel_id"),
                         });
                     }
                 }
@@ -98,6 +102,9 @@ namespace Kurs1125.Model
             }
             return groups;
         }
+
+
+
 
         private static (string, MySqlParameter[]) CreateInsertQuery(string table, List<(string, object)> values)
         {
