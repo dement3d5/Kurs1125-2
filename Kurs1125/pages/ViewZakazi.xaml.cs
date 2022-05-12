@@ -21,44 +21,11 @@ namespace Kurs1125.pages
             InitializeComponent();
             
             DataContext = new ViewZakaziVM();
-            //Items = ViewZakazs();
+           
 
         }
 
-        //public ObservableCollection<Zakazi> zakazis { get; set; }
-
-        //public ObservableCollection<Zakazi> ViewZakazs()
-        //{
-        //    string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
-        //    ObservableCollection<Zakazi> result = new ObservableCollection<Zakazi>();
-        //    var mySqlDB = MySqlDB.GetDB();
-        //    if (mySqlDB.OpenConnection())
-        //    {
-        //        using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
-        //        using (MySqlDataReader dr = mc.ExecuteReader())
-        //        {
-        //            while (dr.Read())
-        //            {
-        //                result.Add(new Zakazi{
-        //                {
-        //                    Dtincome = dr.GetDateTime("dtincome"),
-        //                    Dtdestination = dr.GetDateTime("dtdestination"),
-        //                    Pod = dr.GetString("place of departure"),
-        //                    Destination = dr.GetString("destination"),
-        //                    Price = dr.GetString("price")
-
-        //                });
-
-        //            }
-
-        //        }
-        //        mySqlDB.CloseConnection();
-
-        //    }
-        //    return result;
-        //}
-
-
+      
         private void Button_Clik_4(object sender, RoutedEventArgs e)
         {
             EditZakazi z = new EditZakazi();

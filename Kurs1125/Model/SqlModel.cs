@@ -21,10 +21,100 @@ namespace Kurs1125.Model
                 sqlModel = new SqlModel();
             return sqlModel;
         }
+        internal List<Zakazi> Zakazi()
+        {
+            List<Zakazi> zakazi = new List<Zakazi>();
+            var groups = new List<Zakazi>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
 
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        groups.Add(new Zakazi
+                        {
 
+                            Dtincome = dr.GetDateTime("dtincome"),
+                            Dtdestination = dr.GetDateTime("dtdestination"),
+                            Pod = dr.GetString("place of departure"),
+                            Destination = dr.GetString("destination"),
+                            Price = dr.GetString("price"),
+                            AB1 = dr.GetInt32("Abonent_id"),
+                            ND = dr.GetInt32("number_dispatchs"),
+                            Vid = dr.GetInt32("Voditel_id"),
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return groups;
+        }
+        internal List<Voditel> Voditel()
+        {
+            List<Voditel> voditel = new List<Voditel>();
+            var voditels = new List<Voditel>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT fname, lname, mcar, ncar, color FROM `voditel`";
 
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        voditels.Add(new Voditel
+                        {
+                            ID = dr.GetInt32("id"),
+                            Fname = dr.GetString("dtincome"),
+                            Lname = dr.GetString("dtdestination"),
+                            Mcar = dr.GetString("place of departure"),
+                            Ncar = dr.GetString("destination"),
+                            Color = dr.GetString("price")
 
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return voditels;
+        }
+
+       
+        internal List<Zakazi> SelectZakazisByList()
+        {
+
+            var zakazis = new List<Zakazi>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT * FROM `zakazi`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        zakazis.Add(new Zakazi
+                        {
+                            Dtincome = dr.GetDateTime("dtincome"),
+                            Dtdestination = dr.GetDateTime("dtdestination"),
+                            Pod = dr.GetString("place of departure"),
+                            Destination = dr.GetString("destination"),
+                            Price = dr.GetString("price"),
+                            AB1 = dr.GetInt32("Abonent_id"),
+                            ND = dr.GetInt32("number_dispatchs"),
+                            Vid = dr.GetInt32("Voditel_id")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return zakazis;
+        }
 
         public int Insert<T>(T value)
         {
@@ -68,43 +158,6 @@ namespace Kurs1125.Model
             var tableAtrributes = type.GetCustomAttributes(typeof(TableAttribute), false);
             return ((TableAttribute)tableAtrributes.First()).Table;
         }
-
-
-        internal List<Zakazi> Zakazi(int v)
-        {
-            List<Zakazi> zakazi = new List<Zakazi>();
-            var groups = new List<Zakazi>();
-            var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
-
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        groups.Add(new Zakazi
-                        {
-
-                            Dtincome = dr.GetDateTime("dtincome"),
-                            Dtdestination = dr.GetDateTime("dtdestination"),
-                            Pod = dr.GetString("place of departure"),
-                            Destination = dr.GetString("destination"),
-                            Price = dr.GetString("price"),
-                            AB1 = dr.GetInt32("Abonent_id"),
-                            ND = dr.GetInt32("number_dispatchs"),
-                            Vid = dr.GetInt32("Voditel_id"),
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return groups;
-        }
-
-
-
 
         private static (string, MySqlParameter[]) CreateInsertQuery(string table, List<(string, object)> values)
         {

@@ -12,8 +12,6 @@ namespace Kurs1125.ViewModels
 {
     class EditZakaziVM : BaseVM
     {
-        public List<Zakazi> Zakazis { get; set; }
-
         public Zakazi EditZakazi { get; set; }
         public CommandVM SaveZakazi { get; set; }
         private CurrentPageControl currentPageControl;

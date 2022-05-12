@@ -11,24 +11,28 @@ namespace Kurs1125.ViewModels
 {
     public class ViewZakaziVM : BaseVM
     {
-        private List<ViewZakaziVM> ZakazirBySelectedlZakazi;
-        private List<Zakazi> zakazis;
+        private Zakazi selectedZakazi;
+        private List<Zakazi> zakazisBySelectedList;
 
-        public List<Zakazi> Zakazis { get => zakazis; set { zakazis = value; Signal(); } }
-        public Zakazi SelectedZakazis
+        public List<Zakazi> Zakazis { get; set; }
+        public Zakazi SelectedZakazi
         {
-            get => SelectedZakazis;
+            get => selectedZakazi;
             set
             {
-                SelectedZakazis = value;
-                SqlModel ZakaziBySelectedlZakazi = SqlModel.GetInstance();
+                selectedZakazi = value;
+                ZakazisBySelectedList = SqlModel.GetInstance().SelectZakazisByList();
                 Signal();
             }
         }
-
-        public ViewZakaziVM()
+        public List<Zakazi> ZakazisBySelectedList
         {
-            Zakazis = SqlModel.GetInstance().Zakazi(0);
+            get => zakazisBySelectedList;
+            set
+            {
+                zakazisBySelectedList = value;
+                Signal();
+            }
         }
 
     }

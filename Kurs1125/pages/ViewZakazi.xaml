@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Kurs1125.pages" xmlns:viewmodels="clr-namespace:Kurs1125.ViewModels" xmlns:viewmodel="clr-namespace:Kurs1125.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:BaseVM}"
+      xmlns:local="clr-namespace:Kurs1125.pages" xmlns:viewmodels="clr-namespace:Kurs1125.ViewModels"
         mc:Ignorable="d" MaxHeight="400" MaxWidth="7000" ResizeMode="NoResize"
       Title="Диспетчерская" Height="400" Width="781">
 
@@ -13,14 +13,14 @@
             <ColumnDefinition Width="auto" MinWidth="0"/>
             <ColumnDefinition Width="auto" MinWidth="8.351"/>
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{Binding Zakazis}" Margin="220,30,89,-321" Grid.Row="2">
+        <ListView ItemsSource="{Binding ZakazisBySelectedList}" Margin="220,30,89,-321" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Время получения" DisplayMemberBinding="{Binding Dtincome}"/>
-                    <GridViewColumn Header="Время назначения" DisplayMemberBinding="{Binding Dtdestination}"/>
-                    <GridViewColumn Header="Место отправления" DisplayMemberBinding="{Binding Destination}"/>
-                    <GridViewColumn Header="Место назначения" DisplayMemberBinding="{Binding Pod}"/>
-                    <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Время получения" DisplayMemberBinding="{Binding selectedZakazi.Dtincome}"/>
+                    <GridViewColumn Header="Время назначения" DisplayMemberBinding="{Binding selectedZakazi.Dtdestination}"/>
+                    <GridViewColumn Header="Место отправления" DisplayMemberBinding="{Binding selectedZakazi.Destination}"/>
+                    <GridViewColumn Header="Место назначения" DisplayMemberBinding="{Binding selectedZakazi.Pod}"/>
+                    <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding selectedZakazi.Price}"/>
                 </GridView>
             </ListView.View>
         </ListView>
