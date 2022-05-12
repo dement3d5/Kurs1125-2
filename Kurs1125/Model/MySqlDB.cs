@@ -21,10 +21,10 @@ namespace Kurs1125
         public MySqlConnection
                GetConnection()
         {
-            if(conn == null)
+            if(sqlConnection == null)
                 InitConnection();
 
-            return conn;
+            return sqlConnection;
         }
 
 
@@ -32,9 +32,9 @@ namespace Kurs1125
         {
             try
             {
-                if (conn == null)
+                if (sqlConnection == null)
                     InitConnection();
-                conn.Open();
+                sqlConnection.Open();
                 return true;
             }
             catch (Exception e)
@@ -48,7 +48,7 @@ namespace Kurs1125
         {
             try
             {
-                conn.Close(); // закрытие соединения
+                sqlConnection.Close(); // закрытие соединения
             }
             catch (Exception e)
             {
@@ -57,7 +57,7 @@ namespace Kurs1125
         }
 
 
-        internal MySqlConnection conn = null;
+        internal MySqlConnection sqlConnection = null;
         internal void InitConnection()
         {
             InitConnection(Properties.Settings.Default.host, Properties.Settings.Default.username, Properties.Settings.Default.password, Properties.Settings.Default.db);
@@ -72,7 +72,7 @@ namespace Kurs1125
             builder.CharacterSet = "utf8";
             builder.ConnectionTimeout = 5;
 
-            conn = new MySqlConnection(builder.GetConnectionString(true));
+            sqlConnection = new MySqlConnection(builder.GetConnectionString(true));
         }
 
 
@@ -82,7 +82,7 @@ namespace Kurs1125
             //SHOW TABLE STATUS WHERE `Name` = 'group'
             if (OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand($"SHOW TABLE STATUS WHERE `Name` = '{table}'", conn))
+                using (MySqlCommand mc = new MySqlCommand($"SHOW TABLE STATUS WHERE `Name` = '{table}'", sqlConnection))
                 using (MySqlDataReader dr = mc.ExecuteReader())
                 {
                     dr.Read();
@@ -96,7 +96,7 @@ namespace Kurs1125
         {
             if (OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand(query, conn))
+                using (MySqlCommand mc = new MySqlCommand(query, sqlConnection))
                 {
                     if (parameters != null)
                         mc.Parameters.AddRange(parameters);

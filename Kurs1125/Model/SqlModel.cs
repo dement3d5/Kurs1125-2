@@ -22,63 +22,28 @@ namespace Kurs1125.Model
             return sqlModel;
         }
 
-        
-        internal List<Voditel> Voditel()
-        {
-            List<Voditel> voditel = new List<Voditel>();
-            var voditels = new List<Voditel>();
-            var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT fname, lname, mcar, ncar, color FROM `voditel`";
-
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        voditels.Add(new Voditel
-                        {
-                            ID = dr.GetInt32("id"),
-                            Fname = dr.GetString("dtincome"),
-                            Lname = dr.GetString("dtdestination"),
-                            Mcar = dr.GetString("place of departure"),
-                            Ncar = dr.GetString("destination"),
-                            Color = dr.GetString("price")
-
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return voditels;
-        }
-
        
         internal List<Zakazi> SelectZakazisByList()
         {
 
             var zakazi = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
+            string query = $"SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
             if (mySqlDB.OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
                 using (MySqlDataReader dr = mc.ExecuteReader())
                 {
                     while (dr.Read())
                     {
                         zakazi.Add(new Zakazi
                         {
-                            Id = dr.GetInt32("id"),
                             Dtincome = dr.GetDateTime("dtincome"),
                             Dtdestination = dr.GetDateTime("dtdestination"),
                             Pod = dr.GetString("place of departure"),
                             Destination = dr.GetString("destination"),
                             Price = dr.GetString("price"),
-                            AB1 = dr.GetInt32("Abonent_id"),
-                            ND = dr.GetInt32("number_dispatchs"),
-                            Vid = dr.GetInt32("Voditel_id")
+
                         });
                     }
                 }

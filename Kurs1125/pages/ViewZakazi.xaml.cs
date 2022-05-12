@@ -18,10 +18,8 @@ namespace Kurs1125.pages
     {
         public ViewZakazi()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
             DataContext = new ViewZakaziVM();
-           
 
         }
 

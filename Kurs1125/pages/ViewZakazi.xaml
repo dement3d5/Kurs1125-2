@@ -4,30 +4,31 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kurs1125.pages" xmlns:viewmodels="clr-namespace:Kurs1125.ViewModels"
-        mc:Ignorable="d" MaxHeight="400" MaxWidth="7000" ResizeMode="NoResize"
-      Title="Диспетчерская" Height="400" Width="781">
+        mc:Ignorable="d" 
+      Title="Диспетчерская" Height="500" Width="750" MaxHeight="550" MaxWidth="750" ResizeMode="NoResize"
+        MinHeight="550" MinWidth="750" >
 
     <Grid Background="#FFEEC798" Margin="0,0,1,-6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" MinWidth="779.362"/>
-            <ColumnDefinition Width="auto" MinWidth="0"/>
-            <ColumnDefinition Width="auto" MinWidth="8.351"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{Binding ZakazisBySelectedList}" Margin="220,30,89,-321" Grid.Row="2">
+        <ListView ItemsSource="{Binding ZakazisBySelectedList}" Margin="138,24,172,-315" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Время получения" DisplayMemberBinding="{Binding selectedZakazi.Dtincome}"/>
-                    <GridViewColumn Header="Время назначения" DisplayMemberBinding="{Binding selectedZakazi.Dtdestination}"/>
-                    <GridViewColumn Header="Место отправления" DisplayMemberBinding="{Binding selectedZakazi.Destination}"/>
-                    <GridViewColumn Header="Место назначения" DisplayMemberBinding="{Binding selectedZakazi.Pod}"/>
-                    <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding selectedZakazi.Price}"/>
+                    <GridViewColumn Header="Время получения" DisplayMemberBinding="{Binding Dtincome}"/>
+                    <GridViewColumn Header="Время назначения" DisplayMemberBinding="{Binding Dtdestination}"/>
+                    <GridViewColumn Header="Место отправления" DisplayMemberBinding="{Binding Destination}"/>
+                    <GridViewColumn Header="Место назначения" DisplayMemberBinding="{Binding Pod}"/>
+                    <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Price}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
 
-        <Button Click="Button_Clik_4" Height="20" VerticalAlignment="Center" Margin="0,0,698,0" Grid.Row="1" Content="Заказы"/>
-        <Button Height="20" VerticalAlignment="Center" Margin="107,0,591,0" Grid.Row="1" Content="Удалить заказ"/>
+        <Button Click="Button_Clik_4" Height="20" VerticalAlignment="Center" Margin="0,0,713,0" Grid.Row="1" Content="Заказы"/>
+        <Button Height="20" VerticalAlignment="Center" Margin="146,0,575,0" Grid.Row="1" Content="Удалить заказ"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto" MinHeight="20" />

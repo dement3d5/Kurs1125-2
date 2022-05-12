@@ -32,6 +32,7 @@ namespace Kurs1125
             var loginUser = TextBox_login.Text;
             var passUser = TextBox_password.Text;
             var db = MySqlDB.GetDB();
+            bool enter = false;
             if (db.OpenConnection())
             {
                 string querystring = $"select id, login, password from dispet where login ='{loginUser}' and password = '{passUser}'";
@@ -41,21 +42,21 @@ namespace Kurs1125
                     {
                         if (dr.Read())
                         {
-                            if (dr.GetInt32("id") != 0)
-                            {
-                                MessageBox.Show("вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
-                                MainWindow main = new MainWindow();
-                                this.Hide();
-                                main.ShowDialog();
-                                this.Show();
-                            }
+                            enter = dr.GetInt32("id") != 0;
                         }
-                        else
-                            MessageBox.Show("Такого аккаунта не существет!", "Аккаунта не существет!!", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 db.CloseConnection();
             }
+            if(enter)
+            {
+                MessageBox.Show("вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainWindow main = new MainWindow();
+                this.Close();
+                main.Show();
+            }
+            else
+                MessageBox.Show("Такого аккаунта не существет!", "Аккаунта не существет!!", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
     }
 }
