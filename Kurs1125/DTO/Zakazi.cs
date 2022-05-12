@@ -12,7 +12,8 @@ namespace Kurs1125.DTO
     [Table("zakazi")]
     public class Zakazi : BaseDTO
     {
-
+        [Column("id")]
+        public int Id { get; set; }
 
         [Column("dtincome")]
         public DateTime Dtincome { get; set; }

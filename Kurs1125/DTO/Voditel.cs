@@ -11,6 +11,9 @@ namespace Kurs1125.DTO
     [Table("voditel")]
     public class Voditel : BaseDTO
     {
+        [Column("id")]
+        public int Id { get; set; }
+
         [Column("fname")]
         public string Fname { get; set; }
 

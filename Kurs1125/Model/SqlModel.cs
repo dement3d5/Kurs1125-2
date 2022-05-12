@@ -21,38 +21,8 @@ namespace Kurs1125.Model
                 sqlModel = new SqlModel();
             return sqlModel;
         }
-        internal List<Zakazi> Zakazi()
-        {
-            List<Zakazi> zakazi = new List<Zakazi>();
-            var groups = new List<Zakazi>();
-            var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
 
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        groups.Add(new Zakazi
-                        {
-
-                            Dtincome = dr.GetDateTime("dtincome"),
-                            Dtdestination = dr.GetDateTime("dtdestination"),
-                            Pod = dr.GetString("place of departure"),
-                            Destination = dr.GetString("destination"),
-                            Price = dr.GetString("price"),
-                            AB1 = dr.GetInt32("Abonent_id"),
-                            ND = dr.GetInt32("number_dispatchs"),
-                            Vid = dr.GetInt32("Voditel_id"),
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return groups;
-        }
+        
         internal List<Voditel> Voditel()
         {
             List<Voditel> voditel = new List<Voditel>();
@@ -88,9 +58,9 @@ namespace Kurs1125.Model
         internal List<Zakazi> SelectZakazisByList()
         {
 
-            var zakazis = new List<Zakazi>();
+            var zakazi = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `zakazi`";
+            string query = $"SELECT dtincome, dtdestination, place of departure, destination, price FROM `zakazi`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.conn))
@@ -98,8 +68,9 @@ namespace Kurs1125.Model
                 {
                     while (dr.Read())
                     {
-                        zakazis.Add(new Zakazi
+                        zakazi.Add(new Zakazi
                         {
+                            Id = dr.GetInt32("id"),
                             Dtincome = dr.GetDateTime("dtincome"),
                             Dtdestination = dr.GetDateTime("dtdestination"),
                             Pod = dr.GetString("place of departure"),
@@ -113,7 +84,7 @@ namespace Kurs1125.Model
                 }
                 mySqlDB.CloseConnection();
             }
-            return zakazis;
+            return zakazi;
         }
 
         public int Insert<T>(T value)
