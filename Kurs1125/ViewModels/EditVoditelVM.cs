@@ -12,7 +12,7 @@ namespace Kurs1125.ViewModels
 {
     class EditVoditelVM : BaseVM
     {
-        public Voditel EditVoditel { get; set; }
+        public Voditel EditVoditel { get; }
         public CommandVM SaveVoditel { get; set; }
         private CurrentPageControl currentPageControl;
 
@@ -21,16 +21,16 @@ namespace Kurs1125.ViewModels
         {
             this.currentPageControl = currentPageControl;
             EditVoditel = new Voditel();
-            InitCommand();
+            Init();
         }
         public EditVoditelVM(Voditel editVoditel, CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
             EditVoditel = editVoditel;
-            InitCommand();
+            Init();
         }
 
-        private void InitCommand()
+        private void Init()
         {
             SaveVoditel = new CommandVM(() => {
                 var model = SqlModel.GetInstance();

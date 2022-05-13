@@ -19,14 +19,14 @@
         <Button Content="Сохранить" Command="{Binding SaveZakazi}" Background="#FFF1ED94" Margin="69,350,120,63" Grid.Row="1"/>
         <TextBlock Margin="10,20,280,397" Grid.Row="1" FontSize="18" ><Run Language="ru-ru" Text="Заявка поступила"/></TextBlock>
         <TextBlock Margin="10,109,313,311" Grid.Row="1" FontSize="18" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="заявки"/></TextBlock>
-        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="160,101,94,311" Grid.Row="1"/>
-        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="160,146,94,265" Grid.Row="1"/>
-        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="111,190,184,222" Grid.Row="1"/>
+        <TextBox Text ="{Binding EditZakazi.Destination}" RenderTransformOrigin="-0.14,0.517" Margin="160,101,94,311" Grid.Row="1" />
+        <TextBox Text ="{Binding EditZakazi.Pod}" RenderTransformOrigin="-0.14,0.517" Margin="160,146,94,265" Grid.Row="1"/>
+        <TextBox Text ="{Binding EditZakazi.Price}" RenderTransformOrigin="-0.14,0.517" Margin="111,190,184,222" Grid.Row="1"/>
         <TextBlock Grid.Row="1" Text="Стоимсть" Margin="10,190,350,222" RenderTransformOrigin="0.463,1.582" FontSize="18" />
         <TextBlock Margin="8,151,296,270" Grid.Row="1" FontSize="18" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="доставки"/></TextBlock>
-        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="160,18,91,395" Grid.Row="1"/>
+        <TextBox Text ="{Binding EditZakazi.Dtincome}" RenderTransformOrigin="-0.14,0.517" Margin="160,18,91,395" Grid.Row="1"/>
         <TextBlock Margin="8,65,284,352" Grid.Row="1" FontSize="18" ><Run Language="ru-ru" Text="Заявку приняли"/></TextBlock>
-        <TextBox RenderTransformOrigin="-0.14,0.517" Margin="160,61,91,352" Grid.Row="1"/>
+        <TextBox Text ="{Binding EditZakazi.Dtdestination}" RenderTransformOrigin="-0.14,0.517" Margin="160,61,91,352" Grid.Row="1"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>

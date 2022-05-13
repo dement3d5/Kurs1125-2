@@ -18,10 +18,14 @@ namespace Kurs1125.ViewModel
             get => currentPageControl.Page;
         }
 
+
+
         public MainVM()
         {
             currentPageControl = new CurrentPageControl();
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
+
+
         }
 
         public CurrentPageControl Returrn_CurrentPageControl()

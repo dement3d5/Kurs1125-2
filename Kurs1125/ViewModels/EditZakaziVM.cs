@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Kurs1125.ViewModels
 {
-    class EditZakaziVM : BaseVM
+    public class EditZakaziVM 
     {
         public Zakazi EditZakazi { get; set; }
         public CommandVM SaveZakazi { get; set; }
@@ -38,6 +38,7 @@ namespace Kurs1125.ViewModels
                     model.Insert(EditZakazi);
                 else
                     model.Update(EditZakazi);
+                currentPageControl.Back();
             });
         }
 

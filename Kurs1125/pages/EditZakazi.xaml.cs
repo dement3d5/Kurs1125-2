@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kurs1125.Tools;
+using Kurs1125.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,11 @@ namespace Kurs1125.pages
     /// </summary>
     public partial class EditZakazi : Window
     {
-        public EditZakazi()
+        public EditZakazi(CurrentPageControl currentPageControl)
         {
             InitializeComponent();
+            DataContext = new EditZakaziVM(currentPageControl);
+
         }
 
 

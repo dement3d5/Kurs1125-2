@@ -56,9 +56,9 @@ namespace Kurs1125
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ViewZakazi v = new ViewZakazi();
+            ViewZakazi v = new ViewZakazi(currentPageControl);
             v.Show();
-
+            
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
