@@ -33,7 +33,7 @@ namespace Kurs1125.DTO
         [Column("Abonent_id")]
         public int AB1 { get; set; }
 
-        [Column("number_dispatchs")]
+        [Column("Disp_id")]
         public int ND { get; set; }
 
         [Column("Voditel_id")]

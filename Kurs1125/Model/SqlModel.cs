@@ -28,7 +28,7 @@ namespace Kurs1125.Model
 
             var zakazi = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
+            string query = "SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
@@ -43,6 +43,36 @@ namespace Kurs1125.Model
                             Pod = dr.GetString("place of departure"),
                             Destination = dr.GetString("destination"),
                             Price = dr.GetString("price"),
+
+
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return zakazi;
+        }
+        internal List<Voditel> SelectVoditel()
+        {
+
+            var zakazi = new List<Voditel>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = "SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        zakazi.Add(new Voditel
+                        {
+                            Fname = dr.GetString("fname"),
+                            Lname = dr.GetString("lname"),
+                            Mcar = dr.GetString("mcar"),
+                            Ncar = dr.GetString("ncar"),
+                            Color = dr.GetString("color"),
+
 
                         });
                     }
@@ -119,7 +149,7 @@ namespace Kurs1125.Model
             var rows = values.Select(s =>
             {
                 parameters.Add(new MySqlParameter($"p{count}", s.Item2));
-                return $"{s.Item1} = @p{count++}";
+                return $"`{s.Item1}` = @p{count++}";
             });
             stringBuilder.Append(string.Join(',', rows));
             return parameters;
