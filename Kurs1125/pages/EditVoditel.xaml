@@ -27,15 +27,15 @@
         </Line>
         <Button Content="Сохранить" Command="{Binding SaveVoditel}" Background="#FFF1ED94" Margin="70,413,70,0" Grid.Row="1"/>
         <TextBlock Margin="0,20,332,396" Grid.Row="1" ><Run Language="ru-ru" Text="Фамилия"/></TextBlock>
-        <TextBox Text="{Binding FName}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="57,20,248,395" Grid.Row="1"/>
-        <TextBox Text="{Binding LName}" RenderTransformOrigin="-0.14,0.517" Margin="57,57,248,359" Grid.Row="1"/>
+        <TextBox Text="{Binding Fname}" RenderTransformOrigin="-0.14,0.517" Height="20" Margin="57,20,248,395" Grid.Row="1"/>
+        <TextBox Text="{Binding Lname}" RenderTransformOrigin="-0.14,0.517" Margin="57,57,248,359" Grid.Row="1"/>
         <TextBlock Margin="0,57,356,359" Grid.Row="1" ><Run Language="ru-ru" Text="Имя"/></TextBlock>
         <TextBlock Margin="158,16,121,399" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Марка автомобиля"/></TextBlock>
         <TextBlock Margin="158,41,127,374" Grid.RowSpan="2" ><Run Language="ru-ru" Text="Цвет"/><Run Text=" автомобиля"/></TextBlock>
         <TextBlock Margin="162,66,162,349" Grid.RowSpan="2" ><Run Language="ru-ru" Text="ГОС номер"/></TextBlock>
         <TextBox Text="{Binding Mcar}" RenderTransformOrigin="-0.14,0.517" Margin="269,16,33,401" Grid.Row="1"/>
         <TextBox Text="{Binding Ncar}" RenderTransformOrigin="-0.14,0.517" Margin="269,41,34,376" Grid.Row="1"/>
-        <TextBox Text="{Binding Ncar}" RenderTransformOrigin="-0.14,0.517" Margin="268,66,34,351" Grid.Row="1"/>
+        <TextBox Text="{Binding Color}" RenderTransformOrigin="-0.14,0.517" Margin="268,66,34,351" Grid.Row="1"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>

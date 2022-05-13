@@ -28,5 +28,7 @@ namespace Kurs1125.DTO
 
         [Column("color")]
         public string Color { get; set; }
+
+
     }
 }

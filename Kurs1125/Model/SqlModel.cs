@@ -57,7 +57,7 @@ namespace Kurs1125.Model
 
             var zakazi = new List<Voditel>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = "SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
+            string query = "SELECT fname, lname, `mcar`, ncar, color FROM `voditel`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
