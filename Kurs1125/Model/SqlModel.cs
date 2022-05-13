@@ -81,7 +81,7 @@ namespace Kurs1125.Model
             }
             return zakazi;
         }
-
+        /**/
         public int Insert<T>(T value)
         {
             string table;
