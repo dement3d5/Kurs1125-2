@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Kurs1125.Tools;
+using Kurs1125.ViewModels;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,10 +24,15 @@ namespace Kurs1125
     /// </summary>
     public partial class Auth : Window
     {
+        private CurrentPageControl currentPageControl;
+
         public Auth()
         {
             InitializeComponent();
+ 
+
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,8 +44,8 @@ namespace Kurs1125
             {
                 string querystring = $"select id, login, password from dispet where login ='{loginUser}' and password = '{passUser}'";
                 using (MySqlCommand command = new MySqlCommand(querystring, MySqlDB.GetDB().GetConnection()))
-                { 
-                    using(var dr = command.ExecuteReader())
+                {
+                    using (var dr = command.ExecuteReader())
                     {
                         if (dr.Read())
                         {
@@ -48,15 +55,30 @@ namespace Kurs1125
                 }
                 db.CloseConnection();
             }
-            if(enter)
+            if (enter)
             {
                 MessageBox.Show("вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                 MainWindow main = new MainWindow();
                 this.Close();
                 main.Show();
+                
             }
             else
                 MessageBox.Show("Такого аккаунта не существет!", "Аккаунта не существет!!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            
+
+        }
+
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Regauth i = new Regauth(currentPageControl);
+            this.Close();
+            i.Show();
+           
+
+
+
         }
     }
 }

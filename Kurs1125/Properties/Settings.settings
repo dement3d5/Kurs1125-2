@@ -12,7 +12,7 @@
       <Value Profile="(Default)">192.168.1.12</Value>
     </Setting>
     <Setting Name="db" Type="System.String" Scope="User">
-      <Value Profile="(Default)">mydb</Value>
+      <Value Profile="(Default)">taxi</Value>
     </Setting>
   </Settings>
 </SettingsFile>

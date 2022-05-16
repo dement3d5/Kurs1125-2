@@ -81,7 +81,32 @@ namespace Kurs1125.Model
             }
             return zakazi;
         }
-        /**/
+        internal List<Dispet> SelectDispet()
+        {
+
+            var zakazi = new List<Dispet>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = "SELECT fname, login, password FROM `dispet`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        zakazi.Add(new Dispet
+                        {
+                            Fname = dr.GetString("fname"),
+                            Log = dr.GetString("login"),
+                            Pas = dr.GetString("password")
+
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return zakazi;
+        }
         public int Insert<T>(T value)
         {
             string table;

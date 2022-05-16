@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs1125"
         mc:Ignorable="d"
-        Title="Auth" Height="450" Width="400" MaxHeight="450" MaxWidth="400" Background="#FF767474">
+        Title="Авторизация" Height="450" Width="400" MaxHeight="450" MaxWidth="400" Background="#FF767474">
     <Grid>
         <Button Content="Войти" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" Width="113" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White" Click="Button_Click"/>
         <TextBox x:Name="TextBox_login" HorizontalAlignment="Left" Margin="119,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="18,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Логин"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="18,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
         <TextBox x:Name="TextBox_password" HorizontalAlignment="Left" Margin="119,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White" Click="Button1_Click"/>
 
     </Grid>
 </Window>

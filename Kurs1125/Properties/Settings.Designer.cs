@@ -61,7 +61,7 @@ namespace Kurs1125.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mydb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("taxi")]
         public string db {
             get {
                 return ((string)(this["db"]));

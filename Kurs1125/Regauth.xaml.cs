@@ -14,17 +14,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Kurs1125.pages
+namespace Kurs1125
 {
     /// <summary>
-    /// Логика взаимодействия для EditVoditel.xaml
+    /// Interaction logic for Regauth.xaml
     /// </summary>
-    public partial class EditVoditel : Window
+    public partial class Regauth : Window
     {
-        public EditVoditel(CurrentPageControl currentPageControl)
+        public Regauth(CurrentPageControl currentPageControl)
         {
             InitializeComponent();
-            DataContext = new EditVoditelVM(currentPageControl);
+            DataContext = new RegVM(currentPageControl);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Auth auth = new Auth();
+            this.Close();
+            auth.Show();
         }
     }
 
