@@ -15,12 +15,15 @@ namespace Kurs1125.ViewModels
         public Zakazi EditZakazi { get; set; }
         public CommandVM SaveZakazi { get; set; }
         private CurrentPageControl currentPageControl;
-
+        public DateTime Dtincome { get; set; }
+        public DateTime Dtdestination { get; set; }
 
         public EditZakaziVM(CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
             EditZakazi = new Zakazi();
+            Dtincome = DateTime.Now;
+            Dtdestination = DateTime.Now;
             InitCommand();
         }
         public EditZakaziVM(Zakazi editZakazi, CurrentPageControl currentPageControl)
