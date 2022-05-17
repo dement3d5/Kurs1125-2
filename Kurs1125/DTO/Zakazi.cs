@@ -30,13 +30,14 @@ namespace Kurs1125.DTO
         [Column("price")]
         public string Price { get; set; }
 
-
-
-
-
-
-
-
+        [Column("Dispet_id")]
+        public int Dispet_id { get; set; }
+        
+        [Column("Abonent_id")]
+        public int Abonent_id { get; set; }
+        
+        [Column("Voditel_id")]
+        public int Voditel_id { get; set; }
 
     }
 }

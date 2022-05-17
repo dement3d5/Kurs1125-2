@@ -26,7 +26,7 @@ namespace Kurs1125.Model
         internal List<Zakazi> SelectZakazisByList()
         {
 
-            var zakazi = new List<Zakazi>();
+            var zakazis = new List<Zakazi>();
             var mySqlDB = MySqlDB.GetDB();
             string query = "SELECT dtincome, dtdestination, `place of departure`, destination, price FROM `zakazi`";
             if (mySqlDB.OpenConnection())
@@ -36,7 +36,7 @@ namespace Kurs1125.Model
                 {
                     while (dr.Read())
                     {
-                        zakazi.Add(new Zakazi
+                        zakazis.Add(new Zakazi
                         {
                             Dtincome = dr.GetDateTime("dtincome"),
                             Dtdestination = dr.GetDateTime("dtdestination"),
@@ -44,13 +44,12 @@ namespace Kurs1125.Model
                             Destination = dr.GetString("destination"),
                             Price = dr.GetString("price"),
 
-
                         });
                     }
                 }
                 mySqlDB.CloseConnection();
             }
-            return zakazi;
+            return zakazis;
         }
         internal List<Voditel> SelectVoditel()
         {
