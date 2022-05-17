@@ -22,6 +22,8 @@ namespace Kurs1125.pages
     /// </summary>
     public partial class EditZakazi : Window
     {
+        private CurrentPageControl currentPage;
+
         public EditZakazi(CurrentPageControl currentPageControl)
         {
             InitializeComponent();
@@ -29,7 +31,12 @@ namespace Kurs1125.pages
 
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewZakazi j = new ViewZakazi(currentPage);
+            j.Show();
+            this.Close();
+        }
     }
 
 

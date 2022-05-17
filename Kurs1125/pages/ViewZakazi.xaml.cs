@@ -32,6 +32,7 @@ namespace Kurs1125.pages
         {
                 EditZakazi z = new EditZakazi(currentPage);
                 z.Show();
+            this.Hide();
         }
     }
 }

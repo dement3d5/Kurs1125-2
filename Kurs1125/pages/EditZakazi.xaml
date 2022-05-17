@@ -16,7 +16,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Сохранить" Command="{Binding SaveZakazi}" Background="#FFF1ED94" Margin="69,350,120,63" Grid.Row="1"/>
+        <Button Content="Сохранить" Command="{Binding SaveZakazi}" Background="#FFF1ED94" Margin="69,350,120,63" Grid.Row="1" Click="Button_Click"/>
         <TextBlock Margin="10,20,280,397" Grid.Row="1" FontSize="18" ><Run Language="ru-ru" Text="Заявка поступила"/></TextBlock>
         <TextBlock Margin="10,109,313,311" Grid.Row="1" FontSize="18" ><Run Text="Адрес"/><Run Text=" "/><Run Language="ru-ru" Text="заявки"/></TextBlock>
         <TextBox Text ="{Binding EditZakazi.Destination}" RenderTransformOrigin="-0.14,0.517" Margin="160,101,94,311" Grid.Row="1" />
