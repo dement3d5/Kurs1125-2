@@ -24,6 +24,8 @@ namespace Kurs1125.ViewModels
             EditZakazi = new Zakazi();
             Dtincome = DateTime.Now;
             Dtdestination = DateTime.Now;
+            EditZakazi.Dtincome = Dtincome;
+            EditZakazi.Dtdestination = Dtdestination;
             InitCommand();
         }
         public EditZakaziVM(Zakazi editZakazi, CurrentPageControl currentPageControl)
